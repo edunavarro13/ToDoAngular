@@ -1,0 +1,32 @@
+header {
+  color: rgb(182, 18, 18);
+  text-align: center;
+}
+
+.divAzul {
+  background-color: rgb(24, 33, 153);
+  color: white;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  margin-top: 0;
+  padding-top: 0;
+}
+.divRojo {
+  background-color: rgb(179, 11, 39);
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.error {
+  color: red;
+}
+
+.tarea {
+  background-color: rgb(138, 206, 37);
+  border: 2px solid rgb(17, 13, 13);
+}
+
+.margin-boton {
+  margin-left: 5px;
+}

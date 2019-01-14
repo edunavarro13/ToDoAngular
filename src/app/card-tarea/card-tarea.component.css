@@ -1,0 +1,17 @@
+.margen-tarea {
+    margin-top: 5px;
+}
+
+.margin-boton {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cabecera-activa {
+    background-color: black;
+    color: white;
+}
+
+.tarjeta-activa {
+    background-color: rgb(202, 199, 199);
+}

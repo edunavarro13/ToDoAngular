@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="container divRojo">
+  <h1>
+    {{ title }}
+  </h1>
+</header>
+<div class="container divAzul">
+  <div class="row">
+    <div class="col-8">
+      <h2>Crear tareas: </h2>
+    </div>
+    <div class="col-4">
+      <h2>Filtrar tareas: </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <input type="text" (keyup)="handleKeyup($event)" [(ngModel)]="nuevaTarea" placeholder="Nombre de la tarea">
+      <input type="button" class="btn btn-primary margin-boton" value="➕" (click)="agregarTarea()">
+      <p class="error" *ngIf="verError">El nombre no puede estar vacio.</p>
+    </div>
+    <div class="col-4">
+      <input type="text" (keyup)="filtrar($event)" [(ngModel)]="filtrarTarea" placeholder="Filtrar tareas">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let tarea of tareasAux" class="col">
+      <app-card-tarea [nombreTarea]="tarea" (borrarNombre)="borrarElemento($event)" (modificarDescripcion)="modificarElemDescripcion($event)"
+        (modificarCompletada)="modificarElemCompletada($event)"></app-card-tarea>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
