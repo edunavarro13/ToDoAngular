@@ -34,7 +34,7 @@ export class AppComponent {
           nombre: this.nuevaTarea,
           descripcion: '',
           completada: false,
-          color: 'verde'
+          color: '#ffffff'
         });
       } else {
         this.tareas.push({
@@ -42,7 +42,7 @@ export class AppComponent {
           nombre: this.nuevaTarea,
           descripcion: '',
           completada: false,
-          color: 'verde'
+          color: '#ffffff'
         });
       }
 

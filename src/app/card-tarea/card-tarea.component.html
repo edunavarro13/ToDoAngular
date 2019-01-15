@@ -11,30 +11,8 @@
     <input class="btn btn-primary margin-boton" type="button" value="❌" (click)="borrarTarea()">
     <input type="checkbox" *ngIf="!nombreTarea.completada" (input)="desactivar()">
     <input type="checkbox" *ngIf="nombreTarea.completada" (input)="desactivar()" checked>✔️️
-    <select [(ngModel)]="nombreTarea.color" (change)="cambiaColorTarea($event)">
-        <option value="verde">Verde</option>
-        <option value="rojo">Rojo</option>
-        <option value="azul">Azul</option>
-        <option value="amarillo">Amarillo</option>
-        <option value="negro">Negro</option>
-    </select> 🖌
-    <br><br>
-    <div [ngSwitch]="nombreTarea.color">
-      <div *ngSwitchCase="'rojo'" class="row" style="background-color:red">
-        <p></p>
-      </div>
-      <div *ngSwitchCase="'azul'" class="row" style="background-color:blue">
-        <p></p>
-      </div>
-      <div *ngSwitchCase="'amarillo'" class="row" style="background-color:yellow">
-        <p></p>
-      </div>
-      <div *ngSwitchCase="'negro'" class="row" style="background-color:black">
-        <p></p>
-      </div>
-      <div *ngSwitchDefault class="row" style="background-color:green">
-        <p></p>
-      </div>
-    </div>
+    <input [(colorPicker)]="color" [style.background]="color" (colorPickerChange)="cambiaColorTarea($event)"/>
+    🖌<br><br>
+    <div [style.background]="nombreTarea.color"><p>{{nombreTarea.color}}</p></div>
   </div>
 </div>
