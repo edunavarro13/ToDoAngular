@@ -11,7 +11,7 @@
     <input class="btn btn-primary margin-boton" type="button" value="❌" (click)="borrarTarea()">
     <input type="checkbox" *ngIf="!nombreTarea.completada" (input)="desactivar()">
     <input type="checkbox" *ngIf="nombreTarea.completada" (input)="desactivar()" checked>✔️️
-    <input [(colorPicker)]="color" [style.background]="color" (colorPickerChange)="cambiaColorTarea($event)"/>
+    <input class="size-small" [(colorPicker)]="color" [style.background]="color" (colorPickerChange)="cambiaColorTarea($event)"/>
     🖌<br><br>
     <div [style.background]="nombreTarea.color"><p>{{nombreTarea.color}}</p></div>
   </div>

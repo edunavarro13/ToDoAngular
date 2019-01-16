@@ -15,3 +15,7 @@
 .tarjeta-activa {
     background-color: rgb(202, 199, 199);
 }
+
+.size-small {
+    width: 2.5vw;
+}
